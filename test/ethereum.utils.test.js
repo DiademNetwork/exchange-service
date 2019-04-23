@@ -44,8 +44,8 @@ describe('ethereum transactions', async assert => {
 */
 
   const signedTransaction = await generateContractSendTx({
-    address: senderAddress,
-    encodedData: PROXY_WALLET,
+    address: PROXY_WALLET,
+    encodedData: null,
     amount: 0,
     feeRate: 0
   })
@@ -63,21 +63,14 @@ describe('ethereum transactions', async assert => {
   assert({
     given: 'valid support transaction',
     should: 'accept transaction',
-    actual: ethereum.verifyTransaction(signedTransaction),
+    actual: ethereum.verifyTransaction({ to: PROXY_WALLET }),
     expected: true
-  })
-
-  const invalidTransaction = await generateContractSendTx({
-    address: senderAddress,
-    encodedData: '0xf1a300806c2cdcC5671502817D9Bade074E65496',
-    amount: 0,
-    feeRate: 0
   })
 
   assert({
     given: 'non-expected transaction',
     should: 'fail to verify transaction',
-    actual: ethereum.verifyTransaction(invalidTransaction),
+    actual: ethereum.verifyTransaction({ to: '0xf1a300806c2cdcC5671502817D9Bade074E65496' }),
     expected: false
   })
 
