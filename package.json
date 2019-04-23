@@ -1,0 +1,27 @@
+{
+  "name": "diadem-exchange-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "riteway ./*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.441.0",
+    "bitcoinjs-lib": "^3.3.2",
+    "claudia-api-builder": "^4.1.2",
+    "eosjs": "beta",
+    "ethereum-tx-decoder": "^2.0.1",
+    "loom-js": "^1.38.0",
+    "node-fetch": "^2.3.0",
+    "ramda": "^0.26.1",
+    "web3": "1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "proxyquire": "^2.1.0",
+    "riteway": "^6.0.3"
+  }
+}
