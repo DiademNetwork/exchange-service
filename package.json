@@ -16,7 +16,7 @@
     "eosjs": "beta",
     "ethereum-tx-decoder": "^2.0.1",
     "loom-js": "^1.38.0",
-    "node-fetch": "^2.3.0",
+    "axios": "^0.18.0",
     "ramda": "^0.26.1",
     "web3": "1.0.0-beta.34"
   },
